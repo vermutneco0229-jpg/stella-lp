@@ -130,8 +130,11 @@
     z-index: 2;
   }
   /* 文節単位の折り返し制御(単語の途中で改行させない) */
-  .nb { display: inline-block; }
-  p, li, h1, h2, h3, dd { text-wrap: pretty; }
+  .nb { display: inline; }
+  p, li, h1, h2, h3, dd {
+    text-wrap: pretty;          /* 行末の1〜2文字の孤立を防ぐ */
+    word-break: auto-phrase;    /* 文節の切れ目で折り返す(対応ブラウザ) */
+  }
 
   .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
   .hero-tag {
@@ -717,7 +720,7 @@
       </div>
       <div class="charm-card">
         <div class="num">04</div>
-        <h3>集客はスタジオが<br>サポート</h3>
+        <h3>集客はスタジオがサポート</h3>
         <ul>
           <li>営業・集客の心配がない</li>
           <li>お客様との関係構築に集中できる</li>
@@ -895,13 +898,13 @@
       <h2>応募後の流れ</h2>
     </div>
     <ol class="flow-list">
-      <li><h3>応募</h3><p>応募フォームよりご応募、もしくはお問い合わせください</p></li>
+      <li><h3>応募</h3><p><span class="nb">応募フォームよりご応募、</span><span class="nb">もしくはお問い合わせください</span></p></li>
       <li><h3>履歴書提出</h3><p>経歴・資格などをお送りください</p></li>
       <li><h3>書類選考</h3><p>数日以内にご連絡いたします</p></li>
-      <li><h3>面談</h3><p>オーナー(青山)との面談。<span class="nb">STELLAについて</span><span class="nb">詳しくご説明し、</span><span class="nb">あなたの想いや経歴を</span><span class="nb">お聞きします</span></p></li>
+      <li><h3>面談</h3><p>オーナー(青山)との面談。STELLAについて詳しくご説明し、あなたの想いや経歴をお聞きします</p></li>
       <li><h3>体験・見学</h3><p>実際のスタジオ・設備をご案内します</p></li>
       <li><h3>採用決定</h3><p>契約内容の確認、勤務条件・開始日のご相談</p></li>
-      <li><h3>研修スタート</h3><p>オーナーのサポートのもと、<span class="nb">本格的に業務開始</span></p></li>
+      <li><h3>研修スタート</h3><p><span class="nb">オーナーのサポートのもと、</span><span class="nb">本格的に業務開始</span></p></li>
     </ol>
   </div>
 </section>
