@@ -129,6 +129,10 @@
     pointer-events: none;
     z-index: 2;
   }
+  /* 文節単位の折り返し制御(単語の途中で改行させない) */
+  .nb { display: inline-block; }
+  p, li, h1, h2, h3, dd { text-wrap: pretty; }
+
   .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
   .hero-tag {
     background: var(--white);
@@ -544,7 +548,6 @@
     /* カード・リスト類 */
     .charm-grid, .reward-grid, .footer-grid { grid-template-columns: 1fr; gap: 16px; }
     .charm-card { padding: 22px 20px; }
-    .charm-card h3 br { display: none; }
     .terms-box { padding: 26px 20px; }
     .terms-group:not(:last-child) { margin-bottom: 22px; padding-bottom: 22px; }
     .clients-flex { grid-template-columns: 1fr; gap: 24px; }
@@ -630,7 +633,7 @@
         <span class="hero-tag">代々木上原</span>
       </div>
       <h1>女性が自分らしく輝くための<br>身体づくりを</h1>
-      <p class="hero-sub">STELLAのメンバーとして、一緒に未来をつくりませんか?</p>
+      <p class="hero-sub">STELLAのメンバーとして、<span class="nb">一緒に未来をつくりませんか?</span></p>
       <a class="btn" href="#apply">応募・問い合わせする</a>
       <p class="btn-note">応募前のご質問だけでも歓迎です</p>
     </div>
@@ -648,11 +651,11 @@
       <span class="en">Recruit</span>
       <h2>STELLAメンバー募集</h2>
     </div>
-    <p class="intro-copy">ただ痩せるためではなく、<br>女性が自分らしく輝くための身体づくりを。</p>
+    <p class="intro-copy">ただ痩せるためではなく、<br>女性が自分らしく輝くための<br>身体づくりを。</p>
     <div class="intro-body">
-      <p>STELLAは、女性専門のボディメイクスタジオです。<br>私たちは、お客様の身体の変化だけでなく、その先の人生にも寄り添うことを大切にしています。</p>
-      <p>現在、多くのお客様にご利用いただく中で、今後はパーソナルトレーニング事業に加え、オンラインレッスンや講座事業など、新たなサービス展開も予定しています。</p>
-      <p class="intro-strong">そこで今回、STELLAの想いに共感し、これからの成長を一緒につくってくださるトレーナーを<span class="num">2名</span>募集します。</p>
+      <p>STELLAは、<span class="nb">女性専門の</span><span class="nb">ボディメイクスタジオです。</span><br>私たちは、<span class="nb">お客様の身体の変化だけでなく、</span><span class="nb">その先の人生にも</span><span class="nb">寄り添うことを</span><span class="nb">大切にしています。</span></p>
+      <p>現在、<span class="nb">多くのお客様に</span><span class="nb">ご利用いただく中で、</span>今後は<span class="nb">パーソナルトレーニング事業に加え、</span><span class="nb">オンラインレッスンや</span><span class="nb">講座事業など、</span><span class="nb">新たなサービス展開も</span><span class="nb">予定しています。</span></p>
+      <p class="intro-strong">そこで今回、<span class="nb">STELLAの想いに共感し、</span><span class="nb">これからの成長を</span><span class="nb">一緒につくってくださる</span><span class="nb">トレーナーを<span class="num">2名</span></span><span class="nb">募集します。</span></p>
     </div>
   </div>
 </section>
@@ -665,15 +668,15 @@
       <h2>こんな想いはありませんか?</h2>
     </div>
     <ul class="wish-list">
-      <li>「一人ひとりと深く関わり、成長を見守りたい」</li>
-      <li>「自分の知識やスキルをもっと活かしたい」</li>
-      <li>「マシン任せではない、心と食事まで含めた総合的な指導がしたい」</li>
-      <li>「自分のライフスタイルを大事にしながら働きたい」</li>
-      <li>「技術だけでなく、人間力も高めたい」</li>
-      <li>「長く活躍できるトレーナーになりたい」</li>
-      <li>「新しいことに挑戦できる、成長中のスタジオで経験を積みたい」</li>
+      <li>「一人ひとりと深く関わり、<span class="nb">成長を見守りたい」</span></li>
+      <li>「自分の知識やスキルを<span class="nb">もっと活かしたい」</span></li>
+      <li>「マシン任せではない、<span class="nb">心と食事まで含めた</span><span class="nb">総合的な指導がしたい」</span></li>
+      <li>「自分のライフスタイルを<span class="nb">大事にしながら働きたい」</span></li>
+      <li>「技術だけでなく、<span class="nb">人間力も高めたい」</span></li>
+      <li>「長く活躍できる<span class="nb">トレーナーになりたい」</span></li>
+      <li>「新しいことに挑戦できる、<span class="nb">成長中のスタジオで</span><span class="nb">経験を積みたい」</span></li>
     </ul>
-    <p class="wish-end">そんなあなたの想い、STELLAなら実現できます。</p>
+    <p class="wish-end">そんなあなたの想い、<span class="nb">STELLAなら実現できます。</span></p>
   </div>
 </section>
 
@@ -690,15 +693,15 @@
         <h3>女性専門スタジオで<br>専門性を高められる</h3>
         <ul>
           <li>女性の身体に特化した知識が身につく</li>
-          <li>他のトレーナーと差がつく、専門的スキルが磨ける</li>
-          <li>お客様からの信頼が厚く、やりがいがある</li>
+          <li>他のトレーナーと差がつく、<span class="nb">専門的スキルが磨ける</span></li>
+          <li>お客様からの信頼が厚く、<span class="nb">やりがいがある</span></li>
         </ul>
       </div>
       <div class="charm-card">
         <div class="num">02</div>
         <h3>お客様一人ひとりと<br>深く関われる</h3>
         <ul>
-          <li>マンツーマンだから、その人に合わせた指導ができる</li>
+          <li>マンツーマンだから、<span class="nb">その人に合わせた</span><span class="nb">指導ができる</span></li>
           <li>背景にある悩みや想いまで理解できる</li>
           <li>お客様の人生に本気で向き合える</li>
         </ul>
@@ -745,8 +748,8 @@
       <img class="clients-photo" src="images/clients.jpg" alt="鏡の前でお客様に寄り添うトレーナー">
       <ul>
         <li>30〜40代の女性が中心</li>
-        <li>体型が気になるけれど、何から始めたらいいかわからない方</li>
-        <li>仕事や育児で忙しい中でも、自分を大事にしたい方</li>
+        <li>体型が気になるけれど、<span class="nb">何から始めたらいいか</span><span class="nb">わからない方</span></li>
+        <li>仕事や育児で忙しい中でも、<span class="nb">自分を大事にしたい方</span></li>
       </ul>
     </div>
   </div>
@@ -856,7 +859,7 @@
         <p class="faq-a">応相談です。面談時にお気軽にご相談ください。</p>
       </div>
       <div class="faq-item">
-        <p class="faq-q">応募から採用までどのくらいかかりますか?</p>
+        <p class="faq-q">応募から採用まで<span class="nb">どのくらいかかりますか?</span></p>
         <p class="faq-a">通常2〜3週間程度です。</p>
       </div>
     </div>
@@ -895,10 +898,10 @@
       <li><h3>応募</h3><p>応募フォームよりご応募、もしくはお問い合わせください</p></li>
       <li><h3>履歴書提出</h3><p>経歴・資格などをお送りください</p></li>
       <li><h3>書類選考</h3><p>数日以内にご連絡いたします</p></li>
-      <li><h3>面談</h3><p>オーナー(青山)との面談。STELLAについて詳しくご説明し、あなたの想いや経歴をお聞きします</p></li>
+      <li><h3>面談</h3><p>オーナー(青山)との面談。<span class="nb">STELLAについて</span><span class="nb">詳しくご説明し、</span><span class="nb">あなたの想いや経歴を</span><span class="nb">お聞きします</span></p></li>
       <li><h3>体験・見学</h3><p>実際のスタジオ・設備をご案内します</p></li>
       <li><h3>採用決定</h3><p>契約内容の確認、勤務条件・開始日のご相談</p></li>
-      <li><h3>研修スタート</h3><p>オーナーのサポートのもと、本格的に業務開始</p></li>
+      <li><h3>研修スタート</h3><p>オーナーのサポートのもと、<span class="nb">本格的に業務開始</span></p></li>
     </ol>
   </div>
 </section>
@@ -906,8 +909,8 @@
 <!-- ===== CTA ===== -->
 <section class="cta" id="apply">
   <div class="inner">
-    <h2>一緒に、STELLAの未来をつくりませんか?</h2>
-    <p>あなたの想いと経験を、お聞かせください。</p>
+    <h2>一緒に、<span class="nb">STELLAの未来を</span><span class="nb">つくりませんか?</span></h2>
+    <p>あなたの想いと経験を、<span class="nb">お聞かせください。</span></p>
     <!-- ★応募フォームのURLに差し替え -->
     <a class="btn" href="#" target="_blank" rel="noopener">応募・問い合わせする</a>
     <p class="btn-note">応募前のご質問だけでも歓迎です</p>
@@ -920,7 +923,7 @@
     <div class="sec-head">
       <span class="en">Instagram</span>
       <h2>STELLAを知る</h2>
-      <p class="lead">日々のお客様の変化や指導風景を発信しています。<br>フォローして、STELLAの世界観に触れてみてください。</p>
+      <p class="lead"><span class="nb">日々のお客様の変化や指導風景を</span><span class="nb">発信しています。</span><br>フォローして、<span class="nb">STELLAの世界観に</span><span class="nb">触れてみてください。</span></p>
     </div>
     <a class="insta-link" href="https://www.instagram.com/mayumi_bodymake/" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
