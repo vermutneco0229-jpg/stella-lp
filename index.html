@@ -68,7 +68,14 @@
     justify-content: space-between;
     gap: 16px;
   }
-  .header-logo { width: 150px; height: 44px; }
+  .header-wordmark {
+    font-family: "Shippori Mincho", serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #2e3f49;
+    line-height: 44px;
+  }
   .header-cta {
     background: var(--blue-deep);
     color: #fff;
@@ -466,7 +473,14 @@
   /* ===== フッター ===== */
   footer { background: #2e3f49; color: #d7e3e9; padding: 56px 0 32px; font-size: 14px; }
   .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 36px; }
-  .footer-logo { width: 160px; height: 48px; margin-bottom: 18px; border-color: rgba(255,255,255,0.5); color: #cfe6ee; background: rgba(255,255,255,0.06); }
+  .footer-wordmark {
+    font-family: "Shippori Mincho", serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #fff;
+    margin-bottom: 18px;
+  }
   footer dl { display: grid; grid-template-columns: 92px 1fr; row-gap: 8px; }
   footer dt { color: #9fb4bf; }
   footer a { color: #cfe6ee; }
@@ -489,7 +503,7 @@
     /* ヘッダー:ロゴのみ(CTAは下部固定バーに集約) */
     .header-cta { display: none; }
     .header-inner { justify-content: center; padding: 8px 20px; }
-    .header-logo { width: 120px; height: 36px; }
+    .header-wordmark { font-size: 18px; line-height: 36px; }
 
     /* ファーストビュー */
     .hero-inner { grid-template-columns: 1fr; padding: 28px 20px 44px; gap: 24px; }
@@ -584,8 +598,7 @@
 <!-- ===== ヘッダー ===== -->
 <header>
   <div class="header-inner">
-    <!-- ★ロゴ画像に差し替え -->
-    <div class="ph header-logo">STELLAロゴ</div>
+    <p class="header-wordmark">STELLA</p>
     <a class="header-cta" href="#apply">応募・問い合わせ</a>
   </div>
 </header>
@@ -904,8 +917,7 @@
   <div class="inner">
     <div class="footer-grid">
       <div>
-        <!-- ★ロゴ画像(白抜き版)に差し替え -->
-        <div class="ph footer-logo">STELLAロゴ(白)</div>
+        <p class="footer-wordmark">STELLA</p>
         <dl>
           <dt>スタジオ名</dt><dd>ボディメイクスタジオ STELLA</dd>
           <dt>住所</dt><dd>東京都目黒区駒場4-6-2</dd>
